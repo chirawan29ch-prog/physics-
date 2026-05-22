@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Physics Battleground — Venice Edition</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #0e1a2b; }
-  </style>
-</head>
-<body>
-  <div id="root"></div>
-  <script type="text/babel" data-presets="react">
-    const { useState, useEffect, useRef, useCallback } = React;
-
-
+import { useState, useEffect, useRef } from "react";
 
 // ─────────────────────────────────────────────
 // GLOBAL CSS
@@ -1518,7 +1499,7 @@ function TeacherAirdrop({students,setPendingAirdrop}){
 // ─────────────────────────────────────────────
 // MAIN APP
 // ─────────────────────────────────────────────
-function App(){
+export default function App(){
   const [students,setStudents]=useState(INIT_STUDENTS);
   const [assignments,setAssignments]=useState(INIT_ASSIGNMENTS);
   const [resources,setResources]=useState(INIT_RESOURCES);
@@ -1572,8 +1553,3 @@ function App(){
   );
 }
 
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(React.createElement(App));
-  </script>
-</body>
-</html>
